@@ -22,7 +22,7 @@ galeria(index);
 let proximo = document.getElementById('proximo');
 proximo.addEventListener('click', function (e) {
   index++;
-  if (index == 5) {
+  if (index === 5) {
     index = 0;
   }
   galeria(index);
@@ -31,7 +31,7 @@ proximo.addEventListener('click', function (e) {
 let anterior = document.getElementById('anterior');
 anterior.addEventListener('click', function (e) {
   index--;
-  if (index == -1) {
+  if (index === -1) {
     index = 4;
   }
   galeria(index);

@@ -2,17 +2,18 @@
 // Este arquivo ainda não está incluído no arquivo HTML
 
 
-let tiposBotoes = document.querySelectorAll('.botao-expandir-retrair');
+let todosBotoes = document.getElementsByClassName('botao-expandir-retrair');
 
-for (let botao of tiposBotoes) {
-    botao.addEventListener('click', function (e) {
-        if (botao.parentNode.classList.contains('expandido')) {
-            botao.innerHTML = "+";
-            botao.parentNode.classList.remove('expandido');
 
-        } else {
-            botao.innerHTML = "-";
-            botao.parentNode.classList.add('expandido');
-        }
+todosBotoes.forEach(function (element) {
+    element.addEventListener('click', function(e){
+      if (element.parentNode.classList.contains('expandido')) {
+          element.innerHTML = "+";
+          element.parentNode.classList.remove('expandido');
+      } else {
+          element.innerHTML = "-";
+          element.parentNode.classList.add('expandido');
+      }
     });
-}
+  }
+);
